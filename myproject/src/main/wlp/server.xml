@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server description="new server">
+
+	<featureManager>
+		<feature>javaee-7.0</feature>
+	</featureManager>
+
+	<httpEndpoint id="defaultHttpEndpoint" host="*" httpPort="${httpPort}" httpsPort="${httpsPort}" />
+
+	<application name="leasing" context-root="leasing" location="${wlp.install.dir}/../../${appLocation}" type="war" />
+
+	<keyStore id="defaultKeyStore" password="leasing" />
+
+</server>
