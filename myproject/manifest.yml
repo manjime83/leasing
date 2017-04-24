@@ -7,4 +7,5 @@ applications:
   path: target/leasing-1.0-SNAPSHOT.war
   memory: 256M
   instances: 1
-  JBP_CONFIG_LIBERTY: 'app_archive: {features: [javaee-7.0]}'
+  env:
+    JBP_CONFIG_LIBERTY 'app_archive: {features: [javaee-7.0]}'
