@@ -1,0 +1,9 @@
+---
+applications:
+- domain: mybluemix.net
+  host: aos-it-liberty
+  name: leasing
+  random-route: true
+  path: target/leasing-1.0-SNAPSHOT.war
+  memory: 256M
+  instances: 1

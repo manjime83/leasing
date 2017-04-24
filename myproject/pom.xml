@@ -44,7 +44,7 @@
 					<webResources>
 						<resource>
 							<directory>${project.build.sourceDirectory}</directory>
-							<targetPath>WEB-INF\src</targetPath>
+							<targetPath>WEB-INF/src</targetPath>
 						</resource>
 					</webResources>
 				</configuration>
