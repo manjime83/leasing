@@ -3,7 +3,9 @@ package co.com.assist.leasing.model;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class Comparendo {
+import com.cloudant.client.api.model.Document;
+
+public class Comparendo extends Document {
 
 	private String numero;
 
