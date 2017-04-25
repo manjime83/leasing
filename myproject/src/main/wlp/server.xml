@@ -2,12 +2,13 @@
 <server description="new server">
 
 	<featureManager>
-		<feature>javaee-7.0</feature>
+		<feature>servlet-3.1</feature>
+		<feature>jaxws-2.2</feature>
 	</featureManager>
 
 	<httpEndpoint id="defaultHttpEndpoint" host="*" httpPort="${httpPort}" httpsPort="${httpsPort}" />
 
-	<application name="leasing" context-root="leasing" location="${wlp.install.dir}/../../${appLocation}" type="war" />
+	<application name="leasing" context-root="/" location="${wlp.install.dir}/../../${appLocation}" type="war" />
 
 	<keyStore id="defaultKeyStore" password="leasing" />
 

@@ -9,7 +9,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.ejb.Singleton;
 import javax.xml.ws.BindingProvider;
 
 import com.cloudant.client.api.ClientBuilder;
@@ -25,12 +24,10 @@ import servicios.EstadoCuenta;
 import servicios.EstadoCuenta_Service;
 import servicios.Exception_Exception;
 
-@Singleton
 public class SIMITCache {
 
 	private static CloudantClient client = ClientBuilder.account("de1a6d0b-a585-48b5-8cc7-2b35e0bd60f5-bluemix")
-			.username("de1a6d0b-a585-48b5-8cc7-2b35e0bd60f5-bluemix")
-			.password("1aa78053046efc6b25e2789a03ccb945c2840c394be3a12b9a3a75ada41c2bd7").build();
+			.username("de1a6d0b-a585-48b5-8cc7-2b35e0bd60f5-bluemix").password("1aa78053046efc6b25e2789a03ccb945c2840c394be3a12b9a3a75ada41c2bd7").build();
 
 	public static void main(String[] args) {
 		Database db = client.database("identificaciones", true);

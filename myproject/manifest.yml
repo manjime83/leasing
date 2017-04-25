@@ -1,11 +1,16 @@
 ---
+declared-services:
+  leasing-db:
+    label: cloudantNoSQLDB
+    plan: Lite
 applications:
-- domain: mybluemix.net
-  host: aos-it-liberty
-  name: leasing
-  random-route: true
-  path: target/leasing-1.0-SNAPSHOT.war
+- path: target/leasing-1.0-SNAPSHOT.war
   memory: 256M
   instances: 1
+  domain: mybluemix.net
+  host: aos-it-leasing
+  name: leasing
   env:
-    JBP_CONFIG_LIBERTY 'app_archive: {features: [javaee-7.0]}'
+    JBP_CONFIG_LIBERTY: 'app_archive: { features: [servlet-3.1, jaxws-2.2] }'
+  services:
+  - leasing-db
