@@ -8,7 +8,7 @@ applications:
   memory: 256M
   instances: 1
   domain: mybluemix.net
-  host: aos-it-leasing
+  host: aossas-leasing
   name: leasing
   env:
     JBP_CONFIG_LIBERTY: 'app_archive: { features: [servlet-3.1, jaxws-2.2] }'
