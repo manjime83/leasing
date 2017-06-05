@@ -11,6 +11,6 @@ applications:
   host: aossas-leasing
   name: leasing
   env:
-    JBP_CONFIG_LIBERTY: 'app_archive: { features: [servlet-3.1, jaxws-2.2] }'
+    JBP_CONFIG_LIBERTY: 'app_archive: { features: [servlet-3.1, jaxws-2.2, jaxrsClient-2.0, cloudant-1.0] }'
   services:
   - leasing-db

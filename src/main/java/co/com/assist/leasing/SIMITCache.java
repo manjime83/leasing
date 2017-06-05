@@ -30,7 +30,7 @@ public class SIMITCache {
 			.username("de1a6d0b-a585-48b5-8cc7-2b35e0bd60f5-bluemix")
 			.password("1aa78053046efc6b25e2789a03ccb945c2840c394be3a12b9a3a75ada41c2bd7").build();
 
-	private static CloudantClient bluemix = ClientBuilder.bluemix(System.getenv("VCAP_SERVICES")).build();
+//	private static CloudantClient bluemix = ClientBuilder.bluemix(System.getenv("VCAP_SERVICES")).build();
 
 	public static void main(String[] args) {
 		Database db = client.database("identificaciones", true);

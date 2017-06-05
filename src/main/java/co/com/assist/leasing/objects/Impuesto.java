@@ -6,15 +6,15 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 @XmlRootElement(name = "Impuesto")
-@XmlType(propOrder = { "vigencia", "nroTransaccion", "fechaDePago", "valorPagado", "entidad" })
+@XmlType(propOrder = { "vigencia", "nroTransaccion", "fechaDePago", "entidad" })
 public class Impuesto {
 
 	private String vigencia;
 	private String nroTransaccion;
 	private Date fechaDePago;
-	private String valorPagado;
 	private String entidad;
 
 	public String getVigencia() {
@@ -35,20 +35,13 @@ public class Impuesto {
 
 	@XmlElement
 	@XmlSchemaType(name = "date")
+	@XmlJavaTypeAdapter(XmlDateAdapter.class)
 	public Date getFechaDePago() {
 		return fechaDePago;
 	}
 
 	public void setFechaDePago(Date fechaDePago) {
 		this.fechaDePago = fechaDePago;
-	}
-
-	public String getValorPagado() {
-		return valorPagado;
-	}
-
-	public void setValorPagado(String valorPagado) {
-		this.valorPagado = valorPagado;
 	}
 
 	public String getEntidad() {
