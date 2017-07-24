@@ -256,20 +256,27 @@
     <con:operation id="297fd6ae-e77c-45e4-9ddc-e784fc187152" isOneWay="false" action="" name="AcuerdosPagos" bindingOperationName="AcuerdosPagos" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
       <con:settings/>
       <con:call id="41e37520-a3f5-4a26-8bdc-9c8e93e7c70f" name="Request 1">
-        <con:settings/>
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://consulta.simit.org.co/ServiciosSimit/EstadoCuenta</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://Servicios/">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ser:AcuerdosPagos>\r
-         <!--Optional:-->\r
-         <DocumentoAC>?</DocumentoAC>\r
-         <TipDocAC>?</TipDocAC>\r
+         <DocumentoAC>8909039388</DocumentoAC>\r
+         <TipDocAC>4</TipDocAC>\r
       </ser:AcuerdosPagos>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
         <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://Servicios/EstadoCuenta/AcuerdosPagosRequest"/>
+        <con:wsrmConfig version="1.2"/>
       </con:call>
     </con:operation>
     <con:operation id="d32d539d-995c-4dfc-8b11-2c1a9cccafff" isOneWay="false" action="" name="Comparendos" bindingOperationName="Comparendos" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
@@ -279,7 +286,7 @@
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>http://localhost:8080/ServiciosSimit/EstadoCuenta</con:endpoint>
+        <con:endpoint>https://consulta.simit.org.co/ServiciosSimit/EstadoCuenta</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://Servicios/">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
@@ -327,21 +334,27 @@
     <con:operation id="27f27bbd-fa4f-4687-8602-45a0f2a612a3" isOneWay="false" action="" name="SuspencionesLicencias" bindingOperationName="SuspencionesLicencias" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
       <con:settings/>
       <con:call id="c6c381bb-5f20-42ee-a939-eed984244c02" name="Request 1">
-        <con:settings/>
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://consulta.simit.org.co/ServiciosSimit/EstadoCuenta</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://Servicios/">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <ser:SuspencionesLicencias>\r
-         <!--Optional:-->\r
-         <DocumentoSL>?</DocumentoSL>\r
-         <!--Optional:-->\r
-         <TipoDocSL>?</TipoDocSL>\r
+         <DocumentoSL>8909039388</DocumentoSL>\r
+         <TipoDocSL>4</TipoDocSL>\r
       </ser:SuspencionesLicencias>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
         <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://Servicios/EstadoCuenta/SuspencionesLicenciasRequest"/>
+        <con:wsrmConfig version="1.2"/>
       </con:call>
     </con:operation>
   </con:interface>
@@ -647,7 +660,29 @@
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <leas:conultarObligacionesPendientes>\r
-         <placa>SZP581</placa>\r
+         <placa>BTQ836</placa>\r
+      </leas:conultarObligacionesPendientes>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://leasing.assist.com.co/LeasingQuery/conultarObligacionesPendientes"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+      <con:call id="e2b84024-ad96-47b4-b6fd-928a04d33dce" name="Request 2" sslKeystore="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://mjimenez-laptop:9080/LeasingQueryService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:leas="http://leasing.assist.com.co/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <leas:conultarObligacionesPendientes>\r
+         <placa>WEQ092</placa>\r
       </leas:conultarObligacionesPendientes>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
@@ -685,7 +720,7 @@
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>http://mjimenez-laptop:9080/LeasingQueryService</con:endpoint>
+        <con:endpoint>http://aossas-leasing.mybluemix.net/LeasingQueryService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:leas="http://leasing.assist.com.co/">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
@@ -705,11 +740,38 @@
         <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://leasing.assist.com.co/LeasingQuery/conultarComparendosPorIdentificacion"/>
         <con:wsrmConfig version="1.2"/>
       </con:call>
+      <con:call id="a1ec8b63-f919-46f0-8935-132899262f5f" name="80777377">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://aossas-leasing.mybluemix.net/LeasingQueryService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:leas="http://leasing.assist.com.co/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <leas:conultarComparendosPorIdentificacion>\r
+         <identificacion>\r
+            <tipo>1</tipo>\r
+            <numero>80777377</numero>\r
+         </identificacion>\r
+      </leas:conultarComparendosPorIdentificacion>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://leasing.assist.com.co/LeasingQuery/conultarComparendosPorIdentificacion"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
     </con:operation>
     <con:operation id="17950734-b409-4649-9cf1-6460d2288c7f" isOneWay="false" action="" name="conultarVehiculoPorPlaca" bindingOperationName="conultarVehiculoPorPlaca" type="Request-Response" outputName="conultarVehiculoPorPlacaResponse" inputName="conultarVehiculoPorPlaca" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
       <con:settings/>
       <con:call id="88828d8f-6c00-4f0b-a7bd-3ada628bf3aa" name="Request 1">
-        <con:settings/>
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>http://mjimenez-laptop:9080/LeasingQueryService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:leas="http://leasing.assist.com.co/">\r
@@ -749,7 +811,7 @@
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <leas:consultarPagos>\r
-         <placa>TEQ397</placa>\r
+         <placa>BTQ836</placa>\r
       </leas:consultarPagos>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
@@ -769,12 +831,12 @@
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>http://aossas-leasing.mybluemix.net/LeasingQueryService</con:endpoint>
+        <con:endpoint>http://mjimenez-laptop:9080/LeasingQueryService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:leas="http://leasing.assist.com.co/">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <leas:conultarValorVigencia>\r
-         <placa>NER159</placa>\r
+         <placa>BTQ823</placa>\r
          <vigencia>2017</vigencia>\r
       </leas:conultarValorVigencia>\r
    </soapenv:Body>\r
